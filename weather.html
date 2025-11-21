@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Daily Info - Campus Life</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tabs -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Campus Life</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cafeteria.html">Cafeteria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffee.html">Coffee Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="weather.html">Weather & Daily Info Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Weather & Daily Info</h1>
+
+        <!-- Top Row - Weather Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h4 mb-0">Arkansas Weather</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- Current Weather -->
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <h3 class="h5">Current Conditions</h3>
+                                <div id="currentWeather">
+                                    <p><strong>Temperature:</strong> <span id="temp">NA</span></p>
+                                    <p><strong>Conditions:</strong> <span id="conditions"> NA </span></p>
+                                    <p><strong>Humidity:</strong> <span id="humidity">NA</span></p>
+                                    <p><strong>Wind:</strong> <span id="wind">NA</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="h5">Should I bring an umbrella? </h3>
+                                <div id="umbrellaWidget" class="alert alert-info">
+                                    <p id="umbrellaAdvice">Checking weather...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5-Day Forecast -->
+                        <h3 class="h5">5-Day Forecast</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Row - Calendar/Holidays & Campus Status -->
+        <div class="row">
+            <!-- Left - International Holidays/Events Calendar -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="h4 mb-0">Upcoming Holidays & Events</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="holidaysList">
+                            <p>NA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right - Campus Status -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h2 class="h4 mb-0">Campus Status & Updates</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="campusUpdates">
+                            <!-- Campus alerts and updates -->
+                            <div class="alert alert-success mb-3">
+                                <h5 class="alert-heading">All Clear</h5>
+                                <p>No current campus alerts or emergencies</p>
+                            </div>
+
+                            <h5>Upcoming Campus Events:</h5>
+                            <ul>
+                                <li><strong>Nov 25:</strong> Guest Lecture - Dr. Smith on AI Ethics (3:00 PM, Hall A)</li>
+                                <li><strong>Nov 27:</strong> Career Fair (10:00 AM - 4:00 PM, Student Center)</li>
+                                <li><strong>Dec 1:</strong> Finals Week Begins</li>
+                            </ul>
+
+                            <hr>
+
+                            <h5>Recent Updates:</h5>
+                            <div class="alert alert-info mb-2">
+                                <small><strong>Nov 20, 2:30 PM:</strong> Library extended hours during finals week</small>
+                            </div>
+                            <div class="alert alert-secondary mb-2">
+                                <small><strong>Nov 19, 9:00 AM:</strong> Parking Lot B temporarily closed for maintenance</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional: Add Status Update Form (for admin use) -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h3 class="h5 mb-0">Post Campus Update (Admin)</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="updateForm">
+                            <div class="mb-3">
+                                <label for="updateType" class="form-label">Update Type:</label>
+                                <select class="form-select" id="updateType">
+                                    <option value="event">Campus Event</option>
+                                    <option value="emergency">Emergency Alert</option>
+                                    <option value="general">General Update</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="updateMessage" class="form-label">Message:</label>
+                                <textarea class="form-control" id="updateMessage" rows="3" placeholder="Enter campus update..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for API calls -->
+    <script src="script.js"></script>
+</body>
+</html>
