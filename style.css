@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img/lyon_building_fall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.container-fluid {
+    background-color: rgba(9, 11, 100, 0.555); 
+}
+
+
+.display-1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(159, 158, 160, 0.007);
+}
+
+.lead {
+    color: #f8f9fa !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+.bottom-section {
+    background-color: #49070be0; 
+    padding: 60px 0;
+}
+
+
+.hover-card {
+    transition: all 0.3s ease;
+    border: 2px solid #dee2e6;
+    background-color: white;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+    border-color: #0d6efd;
+}
+
+
+a {
+    color: inherit;
+}
