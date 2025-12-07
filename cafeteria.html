@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria - Campus Life</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Changes background image-->
+    <style>
+        body {
+            background-image: url('img/edsdining-29.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+
 </head>
+
 <body>
     <!-- Tabs -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Campus Life</a>
+            <a class="navbar-brand" href="index.html">Home Page</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,7 +38,7 @@
                         <a class="nav-link active" href="cafeteria.html">Cafeteria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="coffee.html">Coffe Shop</a>
+                        <a class="nav-link" href="coffee.html">Coffee Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="weather.html">Weather & Daily Info Page</a>
@@ -37,8 +50,10 @@
 
     <!-- Main Content -->
     <div class="container my-5">
-        <h1 class="text-center mb-5">Edwards Commons Menu</h1>
-        
+        <div class="col-12 text-center">
+        <h1 class="display-1">Edwards Commons</h1>
+        </div>
+
         <div class="row">
             <!-- Left Side - Menu Sections -->
             <div class="col-lg-8">
@@ -103,7 +118,8 @@
                         <p><strong>Lunch:</strong> 11:00 AM - 2:00 PM</p>
                         <p><strong>Dinner:</strong> 5:00 PM - 8:00 PM</p>
                         <hr>
-                        <p class="mb-0"><strong>Weekend Hours:</strong><br>Brunch: 9:00 AM - 2:00 PM<br>Dinner: 5:00 PM - 7:00 PM</p>
+                        <p class="mb-0"><strong>Weekend Hours:</strong><br>Brunch: 9:00 AM - 2:00 PM<br>Dinner: 5:00 PM
+                            - 7:00 PM</p>
                     </div>
                 </div>
 
@@ -116,7 +132,8 @@
                         <form>
                             <div class="mb-3">
                                 <label for="commentBox" class="form-label">Leave a comment about today's menu:</label>
-                                <textarea class="form-control" id="commentBox" rows="5" placeholder="How was the food today?"></textarea>
+                                <textarea class="form-control" id="commentBox" rows="5"
+                                    placeholder="How was the food today?"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
                         </form>
@@ -129,4 +146,5 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
